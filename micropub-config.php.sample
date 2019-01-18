@@ -1,1 +1,29 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: rosemaryorchard
+ * Date: 07/10/2018
+ * Time: 18:16
+ */
+
+//URL of your blog
+define('URL', '');
+
+//Taxonomy type which categories should be stored as
+define('TAXONOMY', 'tag');
+
+//Destinations where you posts can be saved, one is required, if no mp-destination is sent with a post then the first entry in the array will be used.
+
+//We will send the url as the UID and the name as the name in response to calls
+// ... is an example, it should be replaced with the URL
+define('DESTINATION', [
+    'micro' => ['folder' => '03.micro', 'url' => '.../micro', 'name' => 'MicroBlog', 'folder_prefix' => false, 'default_slug' => 'date'],
+    'blog' => ['folder' => '01.blog', 'url' => '.../blog', 'name' => 'Blog', 'folder_prefix' => true, 'default_slug' => 'title']
+]);
+
+//URL to the folder where the post should be retrieved
+define('POST_ROOT_URL', '');
+define('IMAGE_YEARS', true);
+define('IMAGE_MONTHS', true);
+
+define('TOKEN_ENDPOINT', 'https://tokens.indieauth.com/token');
